@@ -1,7 +1,7 @@
 {
   "name": "arhooks-vue",
   "version": "1.0.1",
-  "description": "",
+  "description": "vue3钩子函数库",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
