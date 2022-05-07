@@ -7,9 +7,9 @@
  * @description: 
  */
 import { Ref } from "vue";
-import type { ElementTarget } from "./shared"
-import { useBoolean } from "./useBoolean";
-import { useEventListener } from "./useEventListener";
+import type { ElementTarget } from "../shared"
+import { useBoolean } from "../useBoolean";
+import { useEventListener } from "../useEventListener";
 
 export type UseHoverOptions = {
   onEnter?: () => void;
