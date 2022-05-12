@@ -2,14 +2,14 @@
  * @author: Archy
  * @Date: 2022-05-05 16:27:41
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-06 13:30:46
- * @FilePath: \vue3-preview\src\hooks\useEventListener.ts
+ * @LastEditTime: 2022-05-12 15:04:33
+ * @FilePath: \arhooks\packages\arhooks-vue\src\useEventListener\useEventListener.ts
  * @description: 
  */
 import { onActivated, onMounted, unref, onBeforeUnmount, onDeactivated, watch, isRef } from "vue"
 import type { Ref } from 'vue'
 
-import type { ElementTarget } from './shared'
+import type { ElementTarget } from '../shared'
 
 export type UseEventListenerOptions = {
   target?: ElementTarget | Ref<ElementTarget | undefined>
@@ -39,7 +39,6 @@ export const useEventListener = (event: string, listener: EventListenerOrEventLi
 
 
   onMounted(add)
-  onActivated(add)
   onBeforeUnmount(remove)
   onDeactivated(remove)
 

@@ -1,5 +1,10 @@
 {
   "packages": ["packages/*"],
   "version": "independent",
-  "npmClient":"pnpm"
+  "npmClient": "pnpm",
+  "command": {
+    "publish": {
+      "registry": "https://registry.npmjs.org/" 
+    }
+  }
 }

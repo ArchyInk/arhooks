@@ -2,7 +2,7 @@
  * @author: Archy
  * @Date: 2022-05-05 13:49:36
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-07 15:03:34
+ * @LastEditTime: 2022-05-12 14:51:06
  * @FilePath: \arhooks\packages\arhooks-vue\src\useBoolean\useBoolean.ts
  * @description: 对boolean类型的state
  */
@@ -21,8 +21,8 @@ export type setBooleanActions = {
  * @param {Boolean} initial 初始化
  * @return {[Ref<Boolean>, setBooleanActions]}
  */
-export const useBoolean = (initial: Boolean): [Ref<Boolean>, setBooleanActions] => {
-  const state = ref<Boolean>(initial)
+export const useBoolean = (initial?: Boolean): [Ref<Boolean>, setBooleanActions] => {
+  const state = ref<Boolean>(initial || false)
 
   const set = (value: Boolean) => {
     state.value = value
@@ -36,6 +36,6 @@ export const useBoolean = (initial: Boolean): [Ref<Boolean>, setBooleanActions] 
   const setFalse = () => {
     set(false)
   }
-  
-  return [readonly(state), { toggle, set, setTrue, setFalse }]
+
+  return [state, { toggle, set, setTrue, setFalse }]
 }

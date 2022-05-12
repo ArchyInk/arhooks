@@ -4,7 +4,9 @@
   "description": "vue3钩子函数库",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "build": "tsc"
   },
   "files": [
@@ -14,6 +16,7 @@
   "author": "Archy",
   "license": "ISC",
   "dependencies": {
+    "vitest": "^0.10.5",
     "vue": "^3.2.33"
   }
 }

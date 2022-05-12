@@ -6,9 +6,9 @@
  * @FilePath: \vue3-preview\src\hooks\index.ts
  * @description: 
  */
-export * from './useCreateElement'
-export * from './useState'
-export * from './useBoolean'
-export * from './useEventListener'
-export * from './useMouseActions'
-export * from './useHover'
+export { default as useCreateElement } from './useCreateElement'
+export { default as useState } from './useState'
+export { default as useBoolean } from './useBoolean'
+export { default as useEventListener } from './useEventListener'
+export { default as useMouseActions } from './useMouseActions'
+export { default as useHover } from './useHover'

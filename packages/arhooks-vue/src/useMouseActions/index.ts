@@ -1,0 +1,1 @@
+export { useMouseActions as default } from './useMouseActions'

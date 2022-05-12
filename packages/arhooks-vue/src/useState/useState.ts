@@ -2,11 +2,11 @@
  * @author: Archy
  * @Date: 2022-05-05 10:43:37
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-06 10:01:31
- * @FilePath: \vue3-preview\src\hooks\useState.ts
+ * @LastEditTime: 2022-05-07 15:42:35
+ * @FilePath: \arhooks\packages\arhooks-vue\src\useState\useState.ts
  * @description: 管理state的hooks，用法和react的setState类似，
  */
-import { ref, readonly } from 'vue'
+import { ref } from 'vue'
 import type { UnwrapRef, Ref } from 'vue'
 
 export type SetStateAction<T> = T | ((prevState: T) => T)

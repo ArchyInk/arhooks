@@ -2,22 +2,13 @@
  * @author: Archy
  * @Date: 2022-05-06 11:22:50
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-06 11:44:13
- * @FilePath: \vue3-preview\src\hooks\useMouseActions.ts
- * @description: 
- */
-/*
- * @author: Archy
- * @Date: 2022-05-06 10:34:27
- * @LastEditors: Archy
- * @LastEditTime: 2022-05-06 11:06:01
- * @FilePath: \vue3-preview\src\hooks\useHover.ts
+ * @LastEditTime: 2022-05-12 15:21:35
+ * @FilePath: \arhooks\packages\arhooks-vue\src\useMouseActions\useMouseActions.ts
  * @description: 
  */
 import { Ref } from "vue";
-import type { ElementTarget } from "./shared"
-import { useBoolean } from "./useBoolean";
-import { useEventListener } from "./useEventListener";
+import type { ElementTarget } from "../shared"
+import useEventListener from "../useEventListener";
 
 export type UseMouseActionsOptions = {
   onEnter?: () => void;
@@ -54,5 +45,4 @@ export const useMouseActions = (target: ElementTarget | Ref<ElementTarget | unde
   onClick && useEventListener('click', (e) => {
     onClick?.(e)
   }, { target })
-
 }

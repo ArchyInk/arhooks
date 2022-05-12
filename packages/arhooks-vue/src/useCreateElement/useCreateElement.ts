@@ -2,8 +2,8 @@
  * @author: Archy
  * @Date: 2022-05-05 11:10:17
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-05 16:07:08
- * @FilePath: \vue3-preview\src\hooks\useCreateElement.ts
+ * @LastEditTime: 2022-05-07 15:40:41
+ * @FilePath: \arhooks\packages\arhooks-vue\src\useCreateElement\useCreateElement.ts
  * @description: 创建Element的钩子函数
  */
 
@@ -15,6 +15,7 @@
  * @param {ElementCreationOptions} options 一个可选的参数 ElementCreationOptions 是包含一个属性名为 is 的对象，该对象的值是用 customElements.define() 方法定义过的一个自定义元素的标签名。
  * @return {HTMLElement}
  */
+
 export const useCreateElement = <K extends keyof HTMLElementTagNameMap>
   (tagName: K,
     props?: Partial<HTMLElementTagNameMap[typeof tagName]>,
