@@ -2,11 +2,11 @@
  * @author: Archy
  * @Date: 2022-05-05 16:27:41
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-12 15:04:33
+ * @LastEditTime: 2022-05-13 11:17:10
  * @FilePath: \arhooks\packages\arhooks-vue\src\useEventListener\useEventListener.ts
  * @description: 
  */
-import { onActivated, onMounted, unref, onBeforeUnmount, onDeactivated, watch, isRef } from "vue"
+import { unref, watch, isRef } from "vue"
 import type { Ref } from 'vue'
 
 import type { ElementTarget } from '../shared'
@@ -20,12 +20,10 @@ export const useEventListener = (event: string, listener: EventListenerOrEventLi
 
   let remove = () => { }
   //if element mounted
-  const add = () => {
-    const element = unref(target)
-    if (element) {
-      element.addEventListener(event, listener, opts)
-      remove = () => element.removeEventListener(event, listener, opts)
-    }
+  const element = unref(target)
+  if (element) {
+    element.addEventListener(event, listener, opts)
+    remove = () => element.removeEventListener(event, listener, opts)
   }
 
   //else wait for element mount
@@ -36,11 +34,6 @@ export const useEventListener = (event: string, listener: EventListenerOrEventLi
       el.addEventListener(event, listener, opts)
       remove = () => el.removeEventListener(event, listener, opts)
     })
-
-
-  onMounted(add)
-  onBeforeUnmount(remove)
-  onDeactivated(remove)
 
   return remove
 }
