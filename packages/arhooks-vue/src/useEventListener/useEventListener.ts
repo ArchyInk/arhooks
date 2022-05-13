@@ -2,7 +2,7 @@
  * @author: Archy
  * @Date: 2022-05-05 16:27:41
  * @LastEditors: Archy
- * @LastEditTime: 2022-05-13 11:17:10
+ * @LastEditTime: 2022-05-13 11:22:24
  * @FilePath: \arhooks\packages\arhooks-vue\src\useEventListener\useEventListener.ts
  * @description: 
  */
@@ -25,7 +25,6 @@ export const useEventListener = (event: string, listener: EventListenerOrEventLi
     element.addEventListener(event, listener, opts)
     remove = () => element.removeEventListener(event, listener, opts)
   }
-
   //else wait for element mount
   (isRef(target) && !unref(target)) &&
     watch(target, (_el) => {
@@ -34,6 +33,5 @@ export const useEventListener = (event: string, listener: EventListenerOrEventLi
       el.addEventListener(event, listener, opts)
       remove = () => el.removeEventListener(event, listener, opts)
     })
-
   return remove
 }
