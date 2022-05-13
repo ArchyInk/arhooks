@@ -1,6 +1,6 @@
 {
   "name": "arhooks-vue",
-  "version": "0.0.0",
+  "version": "1.0.4",
   "description": "vue3钩子函数库",
   "main": "./lib/index.js",
   "scripts": {
